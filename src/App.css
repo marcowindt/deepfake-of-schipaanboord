@@ -1,38 +1,173 @@
-.App {
+@font-face {
+  font-family: PirateKids;
+  src: url("./PirateKids.otf") format("opentype");
+}
+
+.Header {
+  margin: 3rem auto;
   text-align: center;
+  font-family: PirateKids;
+  line-height: 3rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.Letters-deepfake {
+  font-size: 5rem;
+  letter-spacing: 1.1rem;
+  text-shadow: 0px 2px 16px #000000;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.Letters-of {
+  font-size: 2rem;
+  letter-spacing: .5rem;
+  color: #F7AD05;
+  text-shadow: 0px 2px 16px #000000;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.Letters-schipaanboord {
+  font-size: 3rem;
+  letter-spacing: 0.5rem;
+  text-shadow: 0px 2px 16px #000000;
+}
+
+.Main-images {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.Choose-image {
+  border: 6px solid #ffffff;
+  border-radius: 5px;
+  max-width: 400px;
+  height: auto;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.Bottom-text {
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  color: #000000;
+}
+
+.Modal-image {
+  box-sizing: border-box;
+  background-color: #1A2642;
+  width: 100%;
+  height: 100%;
+  font-size: 2rem;
+  text-align: center;
+  outline: none;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  border: 4px solid #ffffff;
 }
 
-.App-link {
-  color: #61dafb;
+.Modal-button {
+  margin-top: 2rem;
+  background-color: #F7AD05;
+  padding: 1rem;
+  font-size: 1.5rem;
+  border-radius: 0.4em;
+  border: none;
+  color: #000000;
+  cursor: pointer;
+  box-shadow: 0px 4px 0 #000000;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.Modal-button:visited {
+  top: 2px;
+  box-shadow: 0px 2px 0 #000000;
+}
+
+.Speech-bubble {
+	position: relative;
+	background: #ffffff;
+	border-radius: .4em;
+  margin: 0 1rem;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0px 4px 1px #000000;
+}
+
+.Speech-bubble:after {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 50%;
+	width: 0;
+	height: 0;
+	border: 1.469em solid transparent;
+	border-left-color: #ffffff;
+	border-right: 0;
+	border-bottom: 0;
+	margin-top: -0.734em;
+	margin-right: -1.469em;
+}
+
+.Lubach {
+  border-radius: .4em;
+}
+
+@media only screen and (min-width: 1000px) {
+  .Main-images {
+    margin: 0 auto;
+    width: 1000px;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media only screen and (max-width: 800px) {
+  .Choose-image {
+    max-width: 200px;
+  }
+
+  .Header {
+    line-height: 2rem;
+    margin: 2rem auto;
+  }
+
+  .Letters-deepfake {
+    font-size: 2.5rem;
+    letter-spacing: 0.4rem;
+    text-shadow: 0px 2px 16px #000000;
+  }
+  
+  .Letters-of {
+    font-size: 1.5rem;
+    letter-spacing: .2rem;
+    color: #F7AD05;
+    text-shadow: 0px 2px 16px #000000;
+  }
+  
+  .Letters-schipaanboord {
+    font-size: 1.5rem;
+    letter-spacing: 0.2rem;
+    text-shadow: 0px 2px 16px #000000;
+  }
+
+  .Choose-image {
+    border: 3px solid #ffffff;
+  }
+
+  body {
+    border-width: 3px;
+  }
+
+  .Modal-image {
+    border-width: 3px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .Choose-image {
+    max-width: 150px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .Choose-image {
+    max-width: 100px;
   }
 }
